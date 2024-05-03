@@ -1,12 +1,3 @@
-import os
-import sys
-
-# Get the modules from the extern folder
-sys.path.insert(0, os.path.abspath("../extern/nqrduck/src/nqrduck"))
-sys.path.insert(
-    0, os.path.abspath("../extern/nqrduck-spectrometer/src/nqrduck_spectrometer")
-)
-
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:

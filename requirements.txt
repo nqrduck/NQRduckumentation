@@ -1,0 +1,8 @@
+sphinx
+pydata-sphinx-theme
+nqrduck
+nqrduck-spectrometer
+nqrduck-spectrometer-limenqr
+nqrduck-spectrometer-simulator
+nqrduck-autotm
+nqrduck-broadband
