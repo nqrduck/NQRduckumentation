@@ -1,0 +1,24 @@
+[submodule "extern/nqrduck"]
+	path = extern/nqrduck
+	url = https://github.com/nqrduck/nqrduck
+[submodule "extern/nqrduck-spectrometer"]
+	path = extern/nqrduck-spectrometer
+	url = https://github.com/nqrduck/nqrduck-spectrometer
+[submodule "extern/nqrduck-spectrometer-limenqr"]
+	path = extern/nqrduck-spectrometer-limenqr
+	url = https://github.com/nqrduck/nqrduck-spectrometer-limenqr
+[submodule "extern/nqrduck-spectrometer-simulator"]
+	path = extern/nqrduck-spectrometer-simulator
+	url = https://github.com/nqrduck/nqrduck-spectrometer-simulator
+[submodule "extern/nqrduck-measurement"]
+	path = extern/nqrduck-measurement
+	url = https://github.com/nqrduck/nqrduck-measurement
+[submodule "extern/nqrduck-pulseprogrammer"]
+	path = extern/nqrduck-pulseprogrammer
+	url = https://github.com/nqrduck/nqrduck-pulseprogrammer
+[submodule "extern/nqrduck-autotm"]
+	path = extern/nqrduck-autotm
+	url = https://github.com/nqrduck/nqrduck-autotm
+[submodule "extern/nqrduck-broadband"]
+	path = extern/nqrduck-broadband
+	url = https://github.com/nqrduck/nqrduck-broadband
