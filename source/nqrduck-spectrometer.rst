@@ -1,5 +1,5 @@
-NQRduck Spectrometer
-====================
+NQRduck Spectrometer Module
+===========================
 
 .. autosummary::
     :toctree: _autosummary

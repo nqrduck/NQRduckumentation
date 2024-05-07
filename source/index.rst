@@ -12,8 +12,11 @@ Welcome to the NQRduckumentation!
 
    nqrduck
    nqrduck-spectrometer
-
-
+   nqrduck-spectrometer-limenqr
+   nqrduck-spectrometer-simulator
+   nqrduck-measurement
+   nqrduck-broadband
+   nqrduck-autotm
 
 Indices and tables
 ==================

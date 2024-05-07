@@ -41,10 +41,13 @@ autodoc_default_options = {
 # This is required for readthedocs to work with PyQt6
 autodoc_mock_imports = [
     "matplotlib",
+    "PyQt6",
     "PyQt6.QtWidgets",
     "PyQt6.QtCore",
     "PyQt6.QtGui",
     "ModuleView",
     "ModuleController",
+    "ModuleModel",
     "nqrduck.module.module",
+    "nqrduck_spectrometer.base_spectrometer",
 ]
