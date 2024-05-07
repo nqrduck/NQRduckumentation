@@ -17,6 +17,8 @@ Welcome to the NQRduckumentation!
    nqrduck-measurement
    nqrduck-broadband
    nqrduck-autotm
+   limedriverbindings
+   nqr-blochsimulator
 
 Indices and tables
 ==================
