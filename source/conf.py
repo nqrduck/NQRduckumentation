@@ -10,11 +10,10 @@ project = "NQRduckumentation"
 copyright = "2024, jupfi"
 author = "jupfi"
 release = "0.0.1"
+version = ""
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
-
-extensions = []
 
 templates_path = ["_templates"]
 exclude_patterns = []
@@ -25,6 +24,9 @@ exclude_patterns = []
 
 html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
+html_theme_options = {
+    'navbar_title': 'NQRduckumentation',
+}
 
 extensions = [
     "sphinx.ext.autodoc",
