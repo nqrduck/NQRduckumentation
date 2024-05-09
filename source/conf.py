@@ -24,9 +24,24 @@ exclude_patterns = []
 
 html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
+html_title = "NQRduckumentation"
+html_context  = {"default_mode": "light"}
+
 html_theme_options = {
-    'navbar_title': 'NQRduckumentation',
+    "icon_links": [
+        {
+            # Label for this link
+            "name": "GitHub",
+            # URL where the link will redirect
+            "url": "https://github.com/nqrduck/",
+            # Icon class (if "type": "fontawesome"), or path to local image (if "type": "local")
+            "icon": "fa-brands fa-square-github",
+            # The type of image to be used (see below for details)
+            "type": "fontawesome",
+        }
+   ]
 }
+
 
 extensions = [
     "sphinx.ext.autodoc",
