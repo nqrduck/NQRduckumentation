@@ -1,5 +1,6 @@
 sphinx
 pydata-sphinx-theme
+myst-parser
 nqrduck
 nqrduck-spectrometer
 nqrduck-spectrometer-limenqr

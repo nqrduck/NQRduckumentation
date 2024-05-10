@@ -48,11 +48,18 @@ extensions = [
     "sphinx.ext.autosummary",
     "sphinx.ext.napoleon",
     'sphinx.ext.todo',
+    'myst_parser'
 ]
 autosummary_generate = True
 
 autodoc_default_options = {
     "members": True,
+}
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.txt': 'markdown',
+    '.md': 'markdown',
 }
 
 # This is required for readthedocs to work with PyQt6

@@ -1,12 +1,12 @@
-0. NQRduck Setup Tutorial 🦆
-============================
+# 0. NQRduck Setup Tutorial 🦆
 
-Introduction
-------------
+
+## Introduction
+
 This Tutorial gives a short overview of how to setup the NQRduck program. The NQRduck program is a collection of different modules that can be installed separately. The core program is the main entry point and provides a user interface to access the different modules. 
 
-Requirements
-------------
+## Requirements
+
 
 - Python 3.10+
 - pip
@@ -14,22 +14,22 @@ Requirements
 - About 600MB of free storage space
 
 
-Steps (Linux)
--------------
+## Steps (Linux)
+
 1. Install the specified requirements.
 
 2. Create a virtual environment and activate it:
 
-.. code-block:: bash
-
+    ```bash
     python -m venv venv
     . venv/bin/activate
+    ```
 
 3. You can now install the NQRduck core program:
-
-.. code-block:: bash
-
+    
+    ```bash 
     pip install nqrduck
+    ```
 
 
 4. Run the program with `nqrduck`. This should open up a window with the NQRduck program.

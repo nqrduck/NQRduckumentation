@@ -7,11 +7,13 @@ Introduction
 
 This is a collection of different tutorials for the NQRduck program.
 
-- :doc:`0. NQRduck Setup <tutorial_0>` - This tutorial shows you how to setup the NQRduck program.
+.. toctree::
+    :maxdepth: 1
+    :caption: Tutorials
 
-- :doc:`1. NQRduck Simulator <tutorial_1>` - This tutorial shows you how to use the NQRduck Simulator.
-
-- :doc:`2. LimeNQR <tutorial_2>` - This tutorial shows you how to use the LimeNQR spectrometer with the NQRduck program.
+    tutorial_0
+    tutorial_1
+    tutorial_2
 
 Tutorials in work
 -----------------
