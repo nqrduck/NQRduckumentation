@@ -5,7 +5,7 @@ The [LimeNQR](docs/LimeNQR.md) spectrometer can be used with the NQRduck program
 This tutorial will show you how to use the [LimeNQR](docs/LimeNQR.md) spectrometer with the NQRduck program. We will perform a loopback measurement, a TX check, and a NQR measurement on a sample. 
 
 ## Requirements
-- All requirements from the [NQRduck Setup Tutorial](0_NQRduck_Setup.md)
+- All requirements from the [NQRduck Setup Tutorial](tutorial_0.md)
 
 - On Debian-based systems, the following packages are required to build the software:
 
@@ -41,7 +41,7 @@ This tutorial will show you how to use the [LimeNQR](docs/LimeNQR.md) spectromet
 ### Loopback Measurement
 This is a simple test to check if the LimeNQR spectrometer is working correctly. We measure the output signal of the LimeNQR spectrometer with the receive path of the LimeNQR spectrometer.
 
-| <img src="Figures/2_loopback_schematic.png" width=40%> |
+| <img src="../_static/tutorials/2_loopback_schematic.png" width=40%> |
 |:--:| 
 | Figure: Schematic for the loopback measurement.|
 
@@ -49,13 +49,13 @@ This is a simple test to check if the LimeNQR spectrometer is working correctly.
 
 2. Connect the USB cable of the LimeNQR spectrometer to your computer. 
 
-3. Load the FID pulse sequence into the `Pulse Programmer`. You can use the same sequence as in the [NQRduck Simulator Tutorial](1_Simulator.md).
+3. Load the FID pulse sequence into the `Pulse Programmer`. You can use the same sequence as in the [NQRduck Simulator Tutorial](tutorial_1.md).
 
 4. Adjust the RX event to occur at the same time as the TX Pulse. We will perform a "Loopback" measurement, where we observe the output signal of of the LImeNQR spectrometer.
 
 5. Connect the TX and RX ports of the LimeNQR spectrometer with a SMA cable and a 20dB attenuator.
 
-| <img src="Figures/2_Loopback.png" width=100%> |
+| <img src="../_static/tutorials/2_Loopback.png" width=100%> |
 |:--:| 
 | Figure: Picture of the Spectrometer setup for the loopback measurement. The silver part is the attenuator. The RX and TX path are connected.|
 
@@ -68,11 +68,11 @@ This is a simple test to check if the LimeNQR spectrometer is working correctly.
 ### TX Check
 Here we will perform a test if the [RFPA](docs/RFPA.md is working correctly. We will measure the output signal of the [RFPA](docs/RFPA.md) by pulsing into a 50 Ohm dummy load and observing the signal with an oscilloscope. 
 
-| <img src="Figures/2_dummy_load.jpg" width=40%> |
+| <img src="../_static/tutorials/2_dummy_load.jpg" width=40%> |
 |:--:|
 | Figure: Picture of the dummy load.|
 
-1. Load the FID pulse sequence in the `Pulse Programmer`. You can use the same sequence as in the [NQRduck Simulator Tutorial](1_Simulator.md). Make sure to add an TR event to the sequence. The last event in your pulse sequence will always be interpreted as the TR time. If you don't add a TR event, the duty cycle of the TX pulse might be too high and you could damage things. 
+1. Load the FID pulse sequence in the `Pulse Programmer`. You can use the same sequence as in the [NQRduck Simulator Tutorial](tutorial_1.md). Make sure to add an TR event to the sequence. The last event in your pulse sequence will always be interpreted as the TR time. If you don't add a TR event, the duty cycle of the TX pulse might be too high and you could damage things. 
 
 2. We use a [pre-amplifier](docs/PreAmp.md) to amplify the signal of the LimeNQR spectrometer. Connect the TX port of the LimeNQR spectrometer to the Pre Amplifier. Connect the Pre Amplifier to the 12V Power Supply. Make sure the Pre Amplifier is cooled because it will burn out otherwise. The RX port of the LimeNQR spectrometer can stay unconnected. Connect the Dummy Load to the Probe Port of the [transcoupler](docs/Transcoupler.md). 
 
@@ -91,7 +91,7 @@ Here we will perform a test if the [RFPA](docs/RFPA.md is working correctly. We 
 ### NQR Measurement
 We will now perform a NQR measurement on a sample. We will use the BiPh3 sample for this tutorial.
 
-| <img src="Figures/2_BiPh3.jpg" width=25%> |
+| <img src="../_static/tutorials/2_BiPh3.jpg" width=25%> |
 |:--:|
 | Figure: Picture of the BiPh3 sample. |
 
@@ -103,7 +103,7 @@ We will now perform a NQR measurement on a sample. We will use the BiPh3 sample 
 
 The experiment now has to be set up as follows:
 
-| <img src="Figures/2_measurement_schematic.png" width=100%> |
+| <img src="../_static/tutorials/2_measurement_schematic.png" width=100%> |
 |:--:|
 | Figure: Schematic of the NQR measurement setup. The power connections are not depicted. |
 
@@ -115,7 +115,7 @@ The experiment now has to be set up as follows:
 - [ ] Connect the [LNA](docs/LNA.md) to the 5V Power Supply.
 - [ ] Connect the probe coil to the probe port of the [transcoupler](docs/Transcoupler.md).
 
-| <img src="Figures/2_fullmeas_pic.jpg" width=100%> |
+| <img src="../_static/tutorials/2_fullmeas_pic.jpg" width=100%> |
 |:--:|
 | Figure: Picture of the NQR measurement setup. |
 

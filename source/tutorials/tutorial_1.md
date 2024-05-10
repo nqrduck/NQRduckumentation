@@ -3,12 +3,12 @@
 This Tutorial gives a short overview of how to use the NQRduck Simulator. The NQRduck Simulator is a module of the NQRduck program that allows you to simulate NQR signals and spectra.
 
 ## Requirements
-* All requirements from the [NQRduck Setup Tutorial](0_NQRduck_Setup.md)
+* All requirements from the [NQRduck Setup Tutorial](tutorial_0.md)
 
 ## Steps (Linux)
 1. Switch to the Spectrometer module in the NQRduck program.
 
-| ![The Spectrometer module.](Figures/1_spectrometer_tab.png) |
+| ![The Spectrometer module.](../_static/tutorials/1_spectrometer_tab.png) |
 | :--: |
 | Figure: The `Spectrometer` module.  The `Settings` are on the left side and the `Pulse Programmer` on the right side.|
 
@@ -21,7 +21,7 @@ This Tutorial gives a short overview of how to use the NQRduck Simulator. The NQ
     - For every `Event` you can specify a certain duration and a name. 
     - Every `Event` now has `Pulse Parameters` associated with it. For the Simulator, these are the TX and the RX Pulse Parameters.
 
-| <img src="Figures/1_pulseprogrammer.png" width=50%> |
+| <img src="../_static/tutorials/1_pulseprogrammer.png" width=50%> |
 |:-------------------------------------------------------------:|
 | **Figure:** An exemplary FID sequence.                        |
 | Description |
@@ -55,7 +55,7 @@ Advisable durations for the different events are:
 
 10. If you found a pulse sequence that you like, you can save it by clicking on the `Save pulse sequence` button in the Pulse Programmer.
 
-11. We will now run these sequences on the real hardware. See [Tutorial 2](2_LimeNQR.md) for more information.
+11. We will now run these sequences on the real hardware. See [Tutorial 2](tutorial_2.md) for more information.
 
 ## Notes:
 - With some of the last updates I broke the signal processing options. I will fix this in the next updates. For now, you can only simulate the signal and not process it.

@@ -15,6 +15,18 @@ This is a collection of different tutorials for the NQRduck program.
     tutorial_1
     tutorial_2
 
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Documentation
+
+    docs/LimeNQR
+    docs/TuningAndMatching
+    docs/RFPA
+    docs/LNA
+    docs/Transcoupler
+    docs/DirectionalCoupler
+
 Tutorials in work
 -----------------
 
