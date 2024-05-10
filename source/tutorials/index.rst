@@ -20,8 +20,8 @@ This is a collection of different tutorials for the NQRduck program.
     :maxdepth: 1
     :caption: Documentation
 
-    docs/LimeNQR
     docs/TuningAndMatching
+    docs/LimeNQR
     docs/RFPA
     docs/LNA
     docs/Transcoupler
