@@ -1,7 +1,5 @@
 # NQRduck Tutorials 🦆
 
-
-
 ## Introduction
 
 

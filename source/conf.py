@@ -48,8 +48,10 @@ extensions = [
     "sphinx.ext.autosummary",
     "sphinx.ext.napoleon",
     'sphinx.ext.todo',
-    'myst_parser'
+    'myst_parser',
+    'sphinx_design'
 ]
+myst_enable_extensions = ["colon_fence"]
 autosummary_generate = True
 
 autodoc_default_options = {
