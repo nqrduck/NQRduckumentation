@@ -1,8 +1,6 @@
-Welcome to the NQRduckumentation!
-=================================
+# Welcome to the NQRduckumentation!
 
-.. figure:: _static/Logo_full.png
-    :alt: NQRduck logo
+![NQRduck Logo](_static/Logo_full.png)
 
 This program is intended as an educational tool for magnetic resonance experiments (NMR, NQR, ...). Its focus lies on modular behaviour depending on what nqrduck modules are installed. 
 
@@ -10,14 +8,14 @@ The core of the program is the nqrduck. It provides a central interface for comm
 
 The focus for spectrometers currently lies on LimeSDR based spectrometers (LimeSDR USB, LimeSDR Mini 2.0).
 
+```{toctree}
+:maxdepth: 1
+:caption: Contents:
 
-
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Contents:
-
-   tutorials/index
-   api_reference/index
+tutorials/index
+api_reference/index
+```
    
+## NQRduck core
+
+
