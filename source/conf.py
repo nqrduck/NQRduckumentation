@@ -27,6 +27,11 @@ html_static_path = ["_static"]
 html_title = "NQRduckumentation"
 html_context  = {"default_mode": "light"}
 
+html_css_files = [
+    'css/custom.css',
+]
+
+
 html_theme_options = {
     "icon_links": [
         {
