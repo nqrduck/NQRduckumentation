@@ -12,14 +12,15 @@ This program is intended as an educational tool for magnetic resonance experimen
 The NQRduck can be easily installed via pip. Additional modules can be installed via an included install wizard.
 :::
 :::{grid-item-card} {fas}`book;pst-color-primary`  Tutorials
+:link: tutorials/index.html
 There exists a range of different modules for the NQRduck software. The tutorials range from simulation to magnetic resonance experiments.
-Different Tutorials can be found [here](tutorials/index.md)
 :::
 :::{grid-item-card} {fab}`python;pst-color-primary`  Python 
 The NQRduck comes with a user friendly PyQt6 based user interface. Different Python modules can be installed via pip to customize the functionality of the program. 
 :::
 :::{grid-item-card} {fas}`tape;pst-color-primary`  API Reference
-API Documentation of the program can be found [here](api_reference/index.rst).
+:link: api_reference/index.html
+API Documentation of the program can be found here.
 :::
 ::::
 
