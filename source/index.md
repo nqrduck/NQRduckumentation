@@ -20,7 +20,8 @@ The NQRduck can be easily installed via pip. Additional modules can be installed
 There exists a range of different modules for the NQRduck software. The tutorials range from simulation to magnetic resonance experiments.
 :::
 :::{grid-item-card}
-{fab}`python;pst-color-primary`  **Python** 
+:link: software_structure/index.html
+{fab}`python;pst-color-primary`  **Sotware Structure** 
 ^^^
 The NQRduck comes with a user friendly PyQt6 based user interface. Different Python modules can be installed via pip to customize the functionality of the program. 
 :::
@@ -41,5 +42,6 @@ The focus for spectrometers currently lies on LimeSDR based spectrometers (LimeS
 :caption: Contents:
 
 tutorials/index
+software_structure/index
 api_reference/index
 ```
