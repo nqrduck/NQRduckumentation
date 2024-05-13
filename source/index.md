@@ -21,7 +21,7 @@ There exists a range of different modules for the NQRduck software. The tutorial
 :::
 :::{grid-item-card}
 :link: software_structure/index.html
-{fab}`python;pst-color-primary`  **Sotware Structure** 
+{fab}`python;pst-color-primary`  **Software Structure** 
 ^^^
 The NQRduck comes with a user friendly PyQt6 based user interface. Different Python modules can be installed via pip to customize the functionality of the program. 
 :::
