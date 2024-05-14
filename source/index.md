@@ -44,4 +44,5 @@ The focus for spectrometers currently lies on LimeSDR based spectrometers (LimeS
 tutorials/index
 software_structure/index
 api_reference/index
+bibliography
 ```

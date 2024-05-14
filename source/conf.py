@@ -54,10 +54,14 @@ extensions = [
     "sphinx.ext.napoleon",
     'sphinx.ext.todo',
     'myst_parser',
-    'sphinx_design'
+    'sphinx_design',
+    'sphinxcontrib.bibtex'
 ]
 myst_enable_extensions = ["colon_fence"]
 autosummary_generate = True
+
+bibtex_bibfiles = ['references.bib']
+bibtex_default_style = 'plain'
 
 autodoc_default_options = {
     "members": True,

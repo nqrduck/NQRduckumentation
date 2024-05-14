@@ -9,7 +9,7 @@ At high frequencies the impedance of the coil has to be matched to the character
 |:--:| 
 |Figure: Example of a parallel resonator topology. The coaxial cable and output of the spectrometer are matched to a purely resistive impedance {math}`Z_0` of {math}`50\Omega`. The Matching Network matches the impedance of the coil to {math}`50\Omega` to minimize reflections.|
 
-The reflection coefficient {math}`\Gamma` describes what portion of the forwarded signal is reflected. It can be calculated from the impedance of the probe coil {math}`Z_{coil}` and the characteristic impedance of the cable {math}`Z_0`.
+The reflection coefficient {math}`\Gamma` describes what portion of the forwarded signal is reflected. It can be calculated from the impedance of the probe coil {math}`Z_{coil}` and the characteristic impedance of the cable {math}`Z_0` {cite:p}`Jouda2020`.
 
 ```{math}
     \Gamma = \frac{Z_{coil} - Z_0}{Z_{coil} + Z_0}

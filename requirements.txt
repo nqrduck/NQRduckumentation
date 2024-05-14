@@ -8,3 +8,4 @@ nqrduck-spectrometer-simulator
 nqrduck-autotm
 nqrduck-broadband
 sphinx-design
+sphinxcontrib-bibtex
