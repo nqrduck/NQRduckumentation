@@ -3,6 +3,7 @@
 
 ## Introduction
 
+If you have already followed the [installation instructions](../installation.md), you can skip this tutorial. Just make sure you have the modules from point 5 installed.
 This Tutorial gives a short overview of how to setup the NQRduck program. The NQRduck program is a collection of different modules that can be installed separately. The core program is the main entry point and provides a user interface to access the different modules. 
 
 ## Requirements

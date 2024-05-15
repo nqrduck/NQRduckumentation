@@ -9,6 +9,7 @@ This program is intended as an educational tool for magnetic resonance experimen
 :gutter: 2
 
 :::{grid-item-card}
+:link: installation.html
 {fas}`wrench;pst-color-primary`  **Installation**
 ^^^
 The NQRduck can be easily installed via pip. Additional modules can be installed via an included install wizard.
@@ -41,6 +42,7 @@ The focus for spectrometers currently lies on LimeSDR based spectrometers (LimeS
 :maxdepth: 1
 :caption: Contents:
 
+installation
 tutorials/index
 software_structure/index
 api_reference/index
