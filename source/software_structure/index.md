@@ -1,4 +1,4 @@
-# NQRduck Software Structure
+# Software Structure
 
 ```{toctree}
 :maxdepth: 1

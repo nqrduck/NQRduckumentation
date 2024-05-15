@@ -1,4 +1,4 @@
-# NQRduck Tutorials 🦆
+# Tutorials 🦆
 
 ## Introduction
 
