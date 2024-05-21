@@ -4,6 +4,8 @@ This section describes the process of developing the NQRduck software.
 
 ## Style
 
+### Linting
+
 Linting is done using [ruff](https://astral.sh/ruff) with the following configuration specified in the `pyproject.toml` file:
 
 ```toml
@@ -27,6 +29,21 @@ convention = "google"
 ```
 
 Run `ruff check` to lint the code, ideally in a pre-commit hook.
+
+### Formatting
+
+Formatting is done using [black](https://black.readthedocs.io/en/stable/).
+
+### Typing
+
+Use type hints for all functions and classes. The type hints should be as specific as possible.
+
+## Documentation
+
+Documentation is implemented with [Sphinx](https://www.sphinx-doc.org/en/master/) project. The documentation is located in `NQRduckumentation` repository.
+
+For docstrings in the code, the [Google style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html) is used.
+
 
 ## Branching
 
