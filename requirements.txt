@@ -1,4 +1,5 @@
 sphinx
+setuptools
 pydata-sphinx-theme
 myst-parser
 nqrduck
@@ -7,5 +8,8 @@ nqrduck-spectrometer-limenqr
 nqrduck-spectrometer-simulator
 nqrduck-autotm
 nqrduck-broadband
+quackseq
+quackseq-simulator
+quackseq-limenqr
 sphinx-design
 sphinxcontrib-bibtex

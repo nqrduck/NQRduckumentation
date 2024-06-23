@@ -2,12 +2,10 @@
 
 ## Requirements
 
-
 - Python 3.10+
 - pip
 - virtualenv
 - About 600MB of free storage space
-
 
 ## Steps (Linux)
 
@@ -21,11 +19,10 @@
     ```
 
 3. You can now install the NQRduck core program:
-    
-    ```bash 
+
+    ```bash
     pip install nqrduck
     ```
-
 
 4. Run the program with `nqrduck`. This should open up a window with the NQRduck install wizard.
 

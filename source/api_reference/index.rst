@@ -24,3 +24,11 @@ API Reference
 
    limedriverbindings
    nqr-blochsimulator
+
+.. toctree::
+   :maxdepth: 2
+   :caption: QuackSeq:
+
+   quackseq
+   quackseq-simulator
+   quackseq-limenqr
