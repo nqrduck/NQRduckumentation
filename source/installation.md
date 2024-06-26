@@ -31,3 +31,14 @@
 6. You now need to restart the program.
 
 7. You can switch between different modules with the toolbar. You can customize the appearance of the program in `Settings -> Preferences`. Settings are saved and restored on the next start.
+Some settings need a restart to take effect - so it's recommended to restart the program after changing settings.
+
+## Uninstall
+
+To uninstall the NQRduck, you can simply delete the virtual environment. If you additionally want the nqrduck package to remove any other files, you can run:
+
+```bash
+nqrduck --uninstall
+```
+
+This removes the desktop file and the icon from the system.

@@ -1,8 +1,167 @@
 # Development
 
-This section describes the process of developing the NQRduck software. 
+This section describes the process of developing the NQRduck software.
+
+## Development of NQRduck modules
+
+Here, an exemplary workflow for the development of new NQRduck modules is given.
+
+If one wants to develop a new module, a template is provided [here](https://github.com/nqrduck/nqrduck-module). This template can be used as a starting point for a new module.
+
+For example, if one wants to develop a new module called *myduck*, one would first clone the repository.
+
+The template repository has the following file structure:
+
+```bash
+nqrduck-module/
+|-- .gitignore
+|-- LICENCE
+|-- README.md
+|-- pyproject.toml
+|-- src/
+|   |-- nqrduck_module/
+|   |   |-- __init__.py
+|   |   |-- controller.py
+|   |   |-- model.py
+|   |   |-- module.py
+|   |   |-- resources/
+|   |   |    |-- module.ini
+|   |   |    |-- module_widget.ui
+|   |   |-- view.py
+|   |   |-- widget.py
+```
+
+*File structure of the NQRDuck module Git repository.*
+
+If one would now like to create a module with the example name *myduck*, the folder and file names would be modified in the following way:
+
+```bash
+nqrduck-myduck/
+|-- .gitignore
+|-- LICENCE
+|-- README.md
+|-- pyproject.toml
+|-- src/
+|   |-- nqrduck_myduck/
+|   |   |-- __init__.py
+|   |   |-- controller.py
+|   |   |-- model.py
+|   |   |-- myduck.py
+|   |   |-- resources/
+|   |   |    |-- module.ini
+|   |   |    |-- myduck_widget.ui
+|   |   |-- view.py
+|   |   |-- widget.py
+
+```
+
+*File structure of the newly created *myduck* module.*
+
+The class names inside the model, view, and controller classes should also be modified to have a more representative name (e.g., `MyDuckController`, `MyDuckView`, `MyDuckModel`). The object created in the `myduck` file should also be renamed:
+
+```python
+from nqrduck.module.module import Module
+from .model import MyDuckModel
+from .view import MyDuckView
+from .controller import MyDuckController
+
+MyDuck = Module(MyDuckModel, MyDuckView, MyDuckController)
+```
+
+Then the `.ini` file inside the resources folder should be modified to represent the *myduck* module.
+
+```toml
+[META]
+name = nqrduck-myduck
+category = MyOwnModules
+toolbar_name = MyDuck
+tooltip = Template for a new module
+```
+
+*Example for the modified .ini file. The category, toolbar name, and tooltip can be freely chosen.*
+
+Additionally, the `pyproject.toml` has to be modified to represent the new module structure:
+
+```toml
+[project]
+name = "nqrduck-myduck"
+version = "0.0.1"
+authors = [
+  { name="YOUR NAME", email="your@e.mail" },
+]
+
+description = "Your description"
+
+...
+
+dependencies = [
+    "nqrduck",
+    "pyqt6",
+    ...
+]
+
+[project.entry-points."nqrduck"]
+"nqrduck-myduck" = "nqrduck_myduck.myduck:MyDuck"
+```
+
+Now functionality can be implemented. For example, the `myduck_widget.ui` could be modified using Qt Designer. The `widget.py` file can then be updated using `pyuic6`.
+
+```bash
+# Navigate to the repository directory
+cd nqrduck-myduck
+
+# Generate your widget.py
+pyuic6 src/nqrduck_myduck/resources/myduck_widget.ui > src/nqrduck_myduck/widget.py
+```
+
+The module should be installed to test its functionality. Ideally, the module is installed with the `-e` argument of `pip` to install it in editable mode. This means changes in the source code of the project will be applied without reinstalling the module.
+
+```bash
+# Navigate to the repository directory
+cd nqrduck-myduck
+
+# Install the package and all dependencies
+pip install -e .
+```
+
+## Example pyproject.toml
+
+```toml
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nqrduck-module"
+version = "0.0.1"
+authors = [
+  { name="Author Name", email="author@e.mail" },
+]
+
+description = "A template for nqrduck modules."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.8"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "matplotlib",
+    "pyqt6",
+    "nqrduck",
+]
+
+[project.entry-points."nqrduck"]
+"nqrduck-module" = "nqrduck_module.module:module"
+```
 
 ## Style
+
+Here the style guide for the NQRduck software is described.
 
 ### Linting
 
@@ -43,7 +202,6 @@ Use type hints for all functions and classes. The type hints should be as specif
 Documentation is implemented with [Sphinx](https://www.sphinx-doc.org/en/master/) project. The documentation is located in `NQRduckumentation` repository.
 
 For docstrings in the code, the [Google style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html) is used.
-
 
 ## Branching
 

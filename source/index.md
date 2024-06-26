@@ -38,6 +38,9 @@ The core of the program is the nqrduck. It provides a central interface for comm
 
 The focus for spectrometers currently lies on LimeSDR based spectrometers (LimeSDR USB, LimeSDR Mini 2.0).
 
+Additionally, the nqrduck framework has it's own modules for vendor independent control execution of pulse sequences. The pulse programming framework is called QuackSeq and a detailed documentation can be found [here](api_reference/quackseq.html).
+Different QuackSeq sequences can either be executed on the LimeSDR or on a simulated spectrometer.
+
 ```{toctree}
 :maxdepth: 1
 :caption: Contents:
