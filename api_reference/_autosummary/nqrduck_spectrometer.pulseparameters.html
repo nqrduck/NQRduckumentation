@@ -1,0 +1,1144 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>nqrduck_spectrometer.pulseparameters &#8212; NQRduckumentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=5b085612" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api_reference/_autosummary/nqrduck_spectrometer.pulseparameters';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="nqrduck_spectrometer.pulsesequence" href="nqrduck_spectrometer.pulsesequence.html" />
+    <link rel="prev" title="nqrduck_spectrometer.model" href="nqrduck_spectrometer.model.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">NQRduckumentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../tutorials/index.html">
+    Tutorials 🦆
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../software_structure/index.html">
+    Software Structure
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../bibliography.html">
+    Bibliography
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/nqrduck/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../tutorials/index.html">
+    Tutorials 🦆
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../software_structure/index.html">
+    Software Structure
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../bibliography.html">
+    Bibliography
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/nqrduck/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">NQRduck Core:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nqrduck.html">NQRduck</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqrduck.assets.html">nqrduck.assets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.assets.animations.html">nqrduck.assets.animations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.assets.icons.html">nqrduck.assets.icons</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqrduck.core.html">nqrduck.core</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.core.install_wizard.html">nqrduck.core.install_wizard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.core.main_controller.html">nqrduck.core.main_controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.core.main_model.html">nqrduck.core.main_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.core.main_view.html">nqrduck.core.main_view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.core.main_window.html">nqrduck.core.main_window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.core.splash_screen.html">nqrduck.core.splash_screen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqrduck.helpers.html">nqrduck.helpers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.helpers.duckwidgets.html">nqrduck.helpers.duckwidgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.helpers.formbuilder.html">nqrduck.helpers.formbuilder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.helpers.functions.html">nqrduck.helpers.functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.helpers.serializer.html">nqrduck.helpers.serializer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.helpers.signalprocessing.html">nqrduck.helpers.signalprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.helpers.unitconverter.html">nqrduck.helpers.unitconverter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.helpers.validators.html">nqrduck.helpers.validators</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqrduck.module.html">nqrduck.module</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.module.module_controller.html">nqrduck.module.module_controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.module.module_model.html">nqrduck.module.module_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.module.module_view.html">nqrduck.module.module_view</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">NQRduck Modules:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../nqrduck-spectrometer.html">NQRduck Spectrometer Module</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="nqrduck_spectrometer.html">nqrduck_spectrometer</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.base_spectrometer_controller.html">nqrduck_spectrometer.base_spectrometer_controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.base_spectrometer_model.html">nqrduck_spectrometer.base_spectrometer_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.base_spectrometer_view.html">nqrduck_spectrometer.base_spectrometer_view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.base_spectrometer_widget.html">nqrduck_spectrometer.base_spectrometer_widget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.controller.html">nqrduck_spectrometer.controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.measurement.html">nqrduck_spectrometer.measurement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.model.html">nqrduck_spectrometer.model</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">nqrduck_spectrometer.pulseparameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.pulsesequence.html">nqrduck_spectrometer.pulsesequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.settings.html">nqrduck_spectrometer.settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.spectrometer.html">nqrduck_spectrometer.spectrometer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.view.html">nqrduck_spectrometer.view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.widget.html">nqrduck_spectrometer.widget</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nqrduck-spectrometer-limenqr.html">NQRduck LimeNQR Spectrometer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqrduck_spectrometer_limenqr.html">nqrduck_spectrometer_limenqr</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer_limenqr.controller.html">nqrduck_spectrometer_limenqr.controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer_limenqr.limenqr.html">nqrduck_spectrometer_limenqr.limenqr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer_limenqr.model.html">nqrduck_spectrometer_limenqr.model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer_limenqr.view.html">nqrduck_spectrometer_limenqr.view</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nqrduck-spectrometer-simulator.html">NQRduck Simulator Module</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqrduck_spectrometer_simulator.html">nqrduck_spectrometer_simulator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer_simulator.controller.html">nqrduck_spectrometer_simulator.controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer_simulator.model.html">nqrduck_spectrometer_simulator.model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer_simulator.simulator.html">nqrduck_spectrometer_simulator.simulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer_simulator.view.html">nqrduck_spectrometer_simulator.view</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../nqrduck-measurement.html">NQRduck Measurement Module</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nqrduck-broadband.html">NQRduck Broadband Module</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqrduck_broadband.html">nqrduck_broadband</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_broadband.broadband.html">nqrduck_broadband.broadband</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_broadband.controller.html">nqrduck_broadband.controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_broadband.model.html">nqrduck_broadband.model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_broadband.view.html">nqrduck_broadband.view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_broadband.widget.html">nqrduck_broadband.widget</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nqrduck-autotm.html">NQRduck AutoTM Module</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqrduck_autotm.html">nqrduck_autotm</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_autotm.autotm.html">nqrduck_autotm.autotm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_autotm.controller.html">nqrduck_autotm.controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_autotm.model.html">nqrduck_autotm.model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_autotm.view.html">nqrduck_autotm.view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_autotm.widget.html">nqrduck_autotm.widget</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other Components:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../limedriverbindings.html">LimeDriverBindings</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="limedriver.html">limedriver</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="limedriver.binding.html">limedriver.binding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="limedriver.hdf_reader.html">limedriver.hdf_reader</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nqr-blochsimulator.html">NQR Blochsimulator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqr_blochsimulator.classes.html">nqr_blochsimulator.classes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqr_blochsimulator.classes.pulse.html">nqr_blochsimulator.classes.pulse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqr_blochsimulator.classes.sample.html">nqr_blochsimulator.classes.sample</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqr_blochsimulator.classes.simulation.html">nqr_blochsimulator.classes.simulation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">QuackSeq:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quackseq.html">QuackSeq</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="quackseq.html">quackseq</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.event.html">quackseq.event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.functions.html">quackseq.functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.helpers.html">quackseq.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.measurement.html">quackseq.measurement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.options.html">quackseq.options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.phase_table.html">quackseq.phase_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.pulseparameters.html">quackseq.pulseparameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.pulsesequence.html">quackseq.pulsesequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.signalprocessing.html">quackseq.signalprocessing</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quackseq-simulator.html">QuackSeq Simulator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="quackseq_simulator.html">quackseq_simulator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="quackseq_simulator.simulator_model.html">quackseq_simulator.simulator_model</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quackseq-limenqr.html">QuackSeq LimeNQR</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="quackseq_limenqr.html">quackseq_limenqr</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="quackseq_limenqr.limenqr.html">quackseq_limenqr.limenqr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq_limenqr.limenqr_controller.html">quackseq_limenqr.limenqr_controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq_limenqr.limenqr_model.html">quackseq_limenqr.limenqr_model</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">API Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../nqrduck-spectrometer.html" class="nav-link">NQRduck Spectrometer Module</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="nqrduck_spectrometer.html" class="nav-link">nqrduck_spectrometer</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">nqrduck_spectrometer.pulseparameters</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-nqrduck_spectrometer.pulseparameters">
+<span id="nqrduck-spectrometer-pulseparameters"></span><h1>nqrduck_spectrometer.pulseparameters<a class="headerlink" href="#module-nqrduck_spectrometer.pulseparameters" title="Link to this heading">#</a></h1>
+<p>Contains the classes for the pulse parameters of the spectrometer. It includes the functions and the options for the pulse parameters.</p>
+<p class="rubric">Classes</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nqrduck_spectrometer.pulseparameters.BooleanOption" title="nqrduck_spectrometer.pulseparameters.BooleanOption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BooleanOption</span></code></a>(name, value)</p></td>
+<td><p>Defines a boolean option for a pulse parameter option.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nqrduck_spectrometer.pulseparameters.FunctionOption" title="nqrduck_spectrometer.pulseparameters.FunctionOption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FunctionOption</span></code></a>(name, functions)</p></td>
+<td><p>Defines a selection option for a pulse parameter option.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nqrduck_spectrometer.pulseparameters.Gate" title="nqrduck_spectrometer.pulseparameters.Gate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gate</span></code></a>(name)</p></td>
+<td><p>Basic PulseParameter for the Gate.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nqrduck_spectrometer.pulseparameters.NumericOption" title="nqrduck_spectrometer.pulseparameters.NumericOption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NumericOption</span></code></a>(name, value[, is_float, ...])</p></td>
+<td><p>Defines a numeric option for a pulse parameter option.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nqrduck_spectrometer.pulseparameters.Option" title="nqrduck_spectrometer.pulseparameters.Option"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Option</span></code></a>(name, value)</p></td>
+<td><p>Defines options for the pulse parameters which can then be set accordingly.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nqrduck_spectrometer.pulseparameters.RXReadout" title="nqrduck_spectrometer.pulseparameters.RXReadout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RXReadout</span></code></a>(name)</p></td>
+<td><p>Basic PulseParameter for the RX Readout.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nqrduck_spectrometer.pulseparameters.TXCustomFunction" title="nqrduck_spectrometer.pulseparameters.TXCustomFunction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TXCustomFunction</span></code></a>()</p></td>
+<td><p>TX Custom function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nqrduck_spectrometer.pulseparameters.TXGaussianFunction" title="nqrduck_spectrometer.pulseparameters.TXGaussianFunction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TXGaussianFunction</span></code></a>()</p></td>
+<td><p>TX Gaussian function.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nqrduck_spectrometer.pulseparameters.TXPulse" title="nqrduck_spectrometer.pulseparameters.TXPulse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TXPulse</span></code></a>(name)</p></td>
+<td><p>Basic TX Pulse Parameter.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nqrduck_spectrometer.pulseparameters.TXRectFunction" title="nqrduck_spectrometer.pulseparameters.TXRectFunction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TXRectFunction</span></code></a>()</p></td>
+<td><p>TX Rectangular function.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nqrduck_spectrometer.pulseparameters.TXSincFunction" title="nqrduck_spectrometer.pulseparameters.TXSincFunction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TXSincFunction</span></code></a>()</p></td>
+<td><p>TX Sinc function.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.BooleanOption">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nqrduck_spectrometer.pulseparameters.</span></span><span class="sig-name descname"><span class="pre">BooleanOption</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.BooleanOption" title="Link to this definition">#</a></dt>
+<dd><p>Defines a boolean option for a pulse parameter option.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.BooleanOption.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.BooleanOption.set_value" title="Link to this definition">#</a></dt>
+<dd><p>Sets the value of the option.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.FunctionOption">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nqrduck_spectrometer.pulseparameters.</span></span><span class="sig-name descname"><span class="pre">FunctionOption</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">functions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.FunctionOption" title="Link to this definition">#</a></dt>
+<dd><p>Defines a selection option for a pulse parameter option.</p>
+<p>It takes different function objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the option.</p></li>
+<li><p><strong>functions</strong> (<em>list</em>) – The functions that can be selected.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.FunctionOption.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.FunctionOption.name" title="Link to this definition">#</a></dt>
+<dd><p>The name of the option.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.FunctionOption.functions">
+<span class="sig-name descname"><span class="pre">functions</span></span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.FunctionOption.functions" title="Link to this definition">#</a></dt>
+<dd><p>The functions that can be selected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.FunctionOption.from_json">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.FunctionOption.from_json" title="Link to this definition">#</a></dt>
+<dd><p>Creates a FunctionOption from a json representation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – The json representation of the FunctionOption.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The FunctionOption.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#nqrduck_spectrometer.pulseparameters.FunctionOption" title="nqrduck_spectrometer.pulseparameters.FunctionOption">FunctionOption</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.FunctionOption.get_function_by_name">
+<span class="sig-name descname"><span class="pre">get_function_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.FunctionOption.get_function_by_name" title="Link to this definition">#</a></dt>
+<dd><p>Returns the function with the given name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the function.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The function with the given name.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="nqrduck.helpers.functions.html#nqrduck.helpers.functions.Function" title="nqrduck.helpers.functions.Function">Function</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.FunctionOption.get_pixmap">
+<span class="sig-name descname"><span class="pre">get_pixmap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.FunctionOption.get_pixmap" title="Link to this definition">#</a></dt>
+<dd><p>Returns the pixmap of the function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.FunctionOption.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.FunctionOption.set_value" title="Link to this definition">#</a></dt>
+<dd><p>Sets the value of the option.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – The value of the option.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.FunctionOption.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.FunctionOption.to_json" title="Link to this definition">#</a></dt>
+<dd><p>Returns a json representation of the option.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The json representation of the option.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.Gate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nqrduck_spectrometer.pulseparameters.</span></span><span class="sig-name descname"><span class="pre">Gate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.Gate" title="Link to this definition">#</a></dt>
+<dd><p>Basic PulseParameter for the Gate. It includes an option for the Gate state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the pulse parameter.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.Gate.GATE_STATE">
+<span class="sig-name descname"><span class="pre">GATE_STATE</span></span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.Gate.GATE_STATE" title="Link to this definition">#</a></dt>
+<dd><p>The Gate state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.Gate.get_pixmap">
+<span class="sig-name descname"><span class="pre">get_pixmap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.Gate.get_pixmap" title="Link to this definition">#</a></dt>
+<dd><p>Returns the pixmap of the Gate PulseParameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The pixmap of the Gate PulseParameter depending on the Gate state.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>QPixmap</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.NumericOption">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nqrduck_spectrometer.pulseparameters.</span></span><span class="sig-name descname"><span class="pre">NumericOption</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_float</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.NumericOption" title="Link to this definition">#</a></dt>
+<dd><p>Defines a numeric option for a pulse parameter option.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.NumericOption.from_json">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.NumericOption.from_json" title="Link to this definition">#</a></dt>
+<dd><p>Creates a NumericOption from a json representation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – The json representation of the NumericOption.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The NumericOption.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#nqrduck_spectrometer.pulseparameters.NumericOption" title="nqrduck_spectrometer.pulseparameters.NumericOption">NumericOption</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.NumericOption.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.NumericOption.set_value" title="Link to this definition">#</a></dt>
+<dd><p>Sets the value of the option.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.NumericOption.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.NumericOption.to_json" title="Link to this definition">#</a></dt>
+<dd><p>Returns a json representation of the option.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The json representation of the option.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.Option">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nqrduck_spectrometer.pulseparameters.</span></span><span class="sig-name descname"><span class="pre">Option</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.Option" title="Link to this definition">#</a></dt>
+<dd><p>Defines options for the pulse parameters which can then be set accordingly.</p>
+<p>Options can be of different types, for example boolean, numeric or function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the option.</p></li>
+<li><p><strong>value</strong> – The value of the option.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.Option.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.Option.name" title="Link to this definition">#</a></dt>
+<dd><p>The name of the option.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.Option.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.Option.value" title="Link to this definition">#</a></dt>
+<dd><p>The value of the option.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.Option.from_json">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#nqrduck_spectrometer.pulseparameters.Option" title="nqrduck_spectrometer.pulseparameters.Option"><span class="pre">Option</span></a></span></span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.Option.from_json" title="Link to this definition">#</a></dt>
+<dd><p>Creates an option from a json representation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – The json representation of the option.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The option.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#nqrduck_spectrometer.pulseparameters.Option" title="nqrduck_spectrometer.pulseparameters.Option">Option</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.Option.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.Option.set_value" title="Link to this definition">#</a></dt>
+<dd><p>Sets the value of the option.</p>
+<p>This method has to be implemented in the derived classes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.Option.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.Option.to_json" title="Link to this definition">#</a></dt>
+<dd><p>Returns a json representation of the option.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The json representation of the option.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.RXReadout">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nqrduck_spectrometer.pulseparameters.</span></span><span class="sig-name descname"><span class="pre">RXReadout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.RXReadout" title="Link to this definition">#</a></dt>
+<dd><p>Basic PulseParameter for the RX Readout. It includes an option for the RX Readout state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the pulse parameter.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.RXReadout.RX">
+<span class="sig-name descname"><span class="pre">RX</span></span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.RXReadout.RX" title="Link to this definition">#</a></dt>
+<dd><p>The RX Readout state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.RXReadout.get_pixmap">
+<span class="sig-name descname"><span class="pre">get_pixmap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.RXReadout.get_pixmap" title="Link to this definition">#</a></dt>
+<dd><p>Returns the pixmap of the RX Readout PulseParameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The pixmap of the RX Readout PulseParameter depending on the RX Readout state.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>QPixmap</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.TXCustomFunction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nqrduck_spectrometer.pulseparameters.</span></span><span class="sig-name descname"><span class="pre">TXCustomFunction</span></span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.TXCustomFunction" title="Link to this definition">#</a></dt>
+<dd><p>TX Custom function.</p>
+<p>Adds the pixmap of the function to the class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.TXCustomFunction.get_pixmap">
+<span class="sig-name descname"><span class="pre">get_pixmap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.TXCustomFunction.get_pixmap" title="Link to this definition">#</a></dt>
+<dd><p>Returns the pixmaps of the function.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.TXGaussianFunction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nqrduck_spectrometer.pulseparameters.</span></span><span class="sig-name descname"><span class="pre">TXGaussianFunction</span></span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.TXGaussianFunction" title="Link to this definition">#</a></dt>
+<dd><p>TX Gaussian function.</p>
+<p>Adds the pixmap of the function to the class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.TXGaussianFunction.get_pixmap">
+<span class="sig-name descname"><span class="pre">get_pixmap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.TXGaussianFunction.get_pixmap" title="Link to this definition">#</a></dt>
+<dd><p>Returns the pixmaps of the function.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.TXPulse">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nqrduck_spectrometer.pulseparameters.</span></span><span class="sig-name descname"><span class="pre">TXPulse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.TXPulse" title="Link to this definition">#</a></dt>
+<dd><p>Basic TX Pulse Parameter. It includes options for the relative amplitude, the phase and the pulse shape.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the pulse parameter.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.TXPulse.get_pixmap">
+<span class="sig-name descname"><span class="pre">get_pixmap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.TXPulse.get_pixmap" title="Link to this definition">#</a></dt>
+<dd><p>Returns the pixmap of the TX Pulse Parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The pixmap of the TX Pulse Parameter depending on the relative amplitude.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>QPixmap</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.TXRectFunction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nqrduck_spectrometer.pulseparameters.</span></span><span class="sig-name descname"><span class="pre">TXRectFunction</span></span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.TXRectFunction" title="Link to this definition">#</a></dt>
+<dd><p>TX Rectangular function.</p>
+<p>Adds the pixmap of the function to the class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.TXRectFunction.get_pixmap">
+<span class="sig-name descname"><span class="pre">get_pixmap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.TXRectFunction.get_pixmap" title="Link to this definition">#</a></dt>
+<dd><p>Returns the pixmaps of the function.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.TXSincFunction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nqrduck_spectrometer.pulseparameters.</span></span><span class="sig-name descname"><span class="pre">TXSincFunction</span></span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.TXSincFunction" title="Link to this definition">#</a></dt>
+<dd><p>TX Sinc function.</p>
+<p>Adds the pixmap of the function to the class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck_spectrometer.pulseparameters.TXSincFunction.get_pixmap">
+<span class="sig-name descname"><span class="pre">get_pixmap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck_spectrometer.pulseparameters.TXSincFunction.get_pixmap" title="Link to this definition">#</a></dt>
+<dd><p>Returns the pixmaps of the function.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="nqrduck_spectrometer.model.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">nqrduck_spectrometer.model</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="nqrduck_spectrometer.pulsesequence.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">nqrduck_spectrometer.pulsesequence</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.BooleanOption"><code class="docutils literal notranslate"><span class="pre">BooleanOption</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.BooleanOption.set_value"><code class="docutils literal notranslate"><span class="pre">BooleanOption.set_value()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.FunctionOption"><code class="docutils literal notranslate"><span class="pre">FunctionOption</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.FunctionOption.name"><code class="docutils literal notranslate"><span class="pre">FunctionOption.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.FunctionOption.functions"><code class="docutils literal notranslate"><span class="pre">FunctionOption.functions</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.FunctionOption.from_json"><code class="docutils literal notranslate"><span class="pre">FunctionOption.from_json()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.FunctionOption.get_function_by_name"><code class="docutils literal notranslate"><span class="pre">FunctionOption.get_function_by_name()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.FunctionOption.get_pixmap"><code class="docutils literal notranslate"><span class="pre">FunctionOption.get_pixmap()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.FunctionOption.set_value"><code class="docutils literal notranslate"><span class="pre">FunctionOption.set_value()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.FunctionOption.to_json"><code class="docutils literal notranslate"><span class="pre">FunctionOption.to_json()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.Gate"><code class="docutils literal notranslate"><span class="pre">Gate</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.Gate.GATE_STATE"><code class="docutils literal notranslate"><span class="pre">Gate.GATE_STATE</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.Gate.get_pixmap"><code class="docutils literal notranslate"><span class="pre">Gate.get_pixmap()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.NumericOption"><code class="docutils literal notranslate"><span class="pre">NumericOption</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.NumericOption.from_json"><code class="docutils literal notranslate"><span class="pre">NumericOption.from_json()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.NumericOption.set_value"><code class="docutils literal notranslate"><span class="pre">NumericOption.set_value()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.NumericOption.to_json"><code class="docutils literal notranslate"><span class="pre">NumericOption.to_json()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.Option"><code class="docutils literal notranslate"><span class="pre">Option</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.Option.name"><code class="docutils literal notranslate"><span class="pre">Option.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.Option.value"><code class="docutils literal notranslate"><span class="pre">Option.value</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.Option.from_json"><code class="docutils literal notranslate"><span class="pre">Option.from_json()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.Option.set_value"><code class="docutils literal notranslate"><span class="pre">Option.set_value()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.Option.to_json"><code class="docutils literal notranslate"><span class="pre">Option.to_json()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.RXReadout"><code class="docutils literal notranslate"><span class="pre">RXReadout</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.RXReadout.RX"><code class="docutils literal notranslate"><span class="pre">RXReadout.RX</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.RXReadout.get_pixmap"><code class="docutils literal notranslate"><span class="pre">RXReadout.get_pixmap()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.TXCustomFunction"><code class="docutils literal notranslate"><span class="pre">TXCustomFunction</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.TXCustomFunction.get_pixmap"><code class="docutils literal notranslate"><span class="pre">TXCustomFunction.get_pixmap()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.TXGaussianFunction"><code class="docutils literal notranslate"><span class="pre">TXGaussianFunction</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.TXGaussianFunction.get_pixmap"><code class="docutils literal notranslate"><span class="pre">TXGaussianFunction.get_pixmap()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.TXPulse"><code class="docutils literal notranslate"><span class="pre">TXPulse</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.TXPulse.get_pixmap"><code class="docutils literal notranslate"><span class="pre">TXPulse.get_pixmap()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.TXRectFunction"><code class="docutils literal notranslate"><span class="pre">TXRectFunction</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.TXRectFunction.get_pixmap"><code class="docutils literal notranslate"><span class="pre">TXRectFunction.get_pixmap()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.TXSincFunction"><code class="docutils literal notranslate"><span class="pre">TXSincFunction</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck_spectrometer.pulseparameters.TXSincFunction.get_pixmap"><code class="docutils literal notranslate"><span class="pre">TXSincFunction.get_pixmap()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/api_reference/_autosummary/nqrduck_spectrometer.pulseparameters.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, jupfi.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

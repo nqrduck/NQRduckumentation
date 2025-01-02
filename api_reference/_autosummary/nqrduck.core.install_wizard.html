@@ -1,0 +1,957 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>nqrduck.core.install_wizard &#8212; NQRduckumentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=5b085612" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api_reference/_autosummary/nqrduck.core.install_wizard';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="nqrduck.core.main_controller" href="nqrduck.core.main_controller.html" />
+    <link rel="prev" title="nqrduck.core" href="nqrduck.core.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">NQRduckumentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../tutorials/index.html">
+    Tutorials 🦆
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../software_structure/index.html">
+    Software Structure
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../bibliography.html">
+    Bibliography
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/nqrduck/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../installation.html">
+    Installation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../tutorials/index.html">
+    Tutorials 🦆
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../software_structure/index.html">
+    Software Structure
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../bibliography.html">
+    Bibliography
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/nqrduck/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">NQRduck Core:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../nqrduck.html">NQRduck</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqrduck.assets.html">nqrduck.assets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.assets.animations.html">nqrduck.assets.animations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.assets.icons.html">nqrduck.assets.icons</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="nqrduck.core.html">nqrduck.core</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">nqrduck.core.install_wizard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.core.main_controller.html">nqrduck.core.main_controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.core.main_model.html">nqrduck.core.main_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.core.main_view.html">nqrduck.core.main_view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.core.main_window.html">nqrduck.core.main_window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.core.splash_screen.html">nqrduck.core.splash_screen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqrduck.helpers.html">nqrduck.helpers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.helpers.duckwidgets.html">nqrduck.helpers.duckwidgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.helpers.formbuilder.html">nqrduck.helpers.formbuilder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.helpers.functions.html">nqrduck.helpers.functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.helpers.serializer.html">nqrduck.helpers.serializer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.helpers.signalprocessing.html">nqrduck.helpers.signalprocessing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.helpers.unitconverter.html">nqrduck.helpers.unitconverter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.helpers.validators.html">nqrduck.helpers.validators</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqrduck.module.html">nqrduck.module</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.module.module_controller.html">nqrduck.module.module_controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.module.module_model.html">nqrduck.module.module_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck.module.module_view.html">nqrduck.module.module_view</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">NQRduck Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nqrduck-spectrometer.html">NQRduck Spectrometer Module</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqrduck_spectrometer.html">nqrduck_spectrometer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.base_spectrometer_controller.html">nqrduck_spectrometer.base_spectrometer_controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.base_spectrometer_model.html">nqrduck_spectrometer.base_spectrometer_model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.base_spectrometer_view.html">nqrduck_spectrometer.base_spectrometer_view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.base_spectrometer_widget.html">nqrduck_spectrometer.base_spectrometer_widget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.controller.html">nqrduck_spectrometer.controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.measurement.html">nqrduck_spectrometer.measurement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.model.html">nqrduck_spectrometer.model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.pulseparameters.html">nqrduck_spectrometer.pulseparameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.pulsesequence.html">nqrduck_spectrometer.pulsesequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.settings.html">nqrduck_spectrometer.settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.spectrometer.html">nqrduck_spectrometer.spectrometer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.view.html">nqrduck_spectrometer.view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer.widget.html">nqrduck_spectrometer.widget</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nqrduck-spectrometer-limenqr.html">NQRduck LimeNQR Spectrometer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqrduck_spectrometer_limenqr.html">nqrduck_spectrometer_limenqr</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer_limenqr.controller.html">nqrduck_spectrometer_limenqr.controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer_limenqr.limenqr.html">nqrduck_spectrometer_limenqr.limenqr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer_limenqr.model.html">nqrduck_spectrometer_limenqr.model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer_limenqr.view.html">nqrduck_spectrometer_limenqr.view</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nqrduck-spectrometer-simulator.html">NQRduck Simulator Module</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqrduck_spectrometer_simulator.html">nqrduck_spectrometer_simulator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer_simulator.controller.html">nqrduck_spectrometer_simulator.controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer_simulator.model.html">nqrduck_spectrometer_simulator.model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer_simulator.simulator.html">nqrduck_spectrometer_simulator.simulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_spectrometer_simulator.view.html">nqrduck_spectrometer_simulator.view</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../nqrduck-measurement.html">NQRduck Measurement Module</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nqrduck-broadband.html">NQRduck Broadband Module</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqrduck_broadband.html">nqrduck_broadband</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_broadband.broadband.html">nqrduck_broadband.broadband</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_broadband.controller.html">nqrduck_broadband.controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_broadband.model.html">nqrduck_broadband.model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_broadband.view.html">nqrduck_broadband.view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_broadband.widget.html">nqrduck_broadband.widget</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nqrduck-autotm.html">NQRduck AutoTM Module</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqrduck_autotm.html">nqrduck_autotm</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_autotm.autotm.html">nqrduck_autotm.autotm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_autotm.controller.html">nqrduck_autotm.controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_autotm.model.html">nqrduck_autotm.model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_autotm.view.html">nqrduck_autotm.view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqrduck_autotm.widget.html">nqrduck_autotm.widget</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other Components:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../limedriverbindings.html">LimeDriverBindings</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="limedriver.html">limedriver</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="limedriver.binding.html">limedriver.binding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="limedriver.hdf_reader.html">limedriver.hdf_reader</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../nqr-blochsimulator.html">NQR Blochsimulator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="nqr_blochsimulator.classes.html">nqr_blochsimulator.classes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="nqr_blochsimulator.classes.pulse.html">nqr_blochsimulator.classes.pulse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqr_blochsimulator.classes.sample.html">nqr_blochsimulator.classes.sample</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nqr_blochsimulator.classes.simulation.html">nqr_blochsimulator.classes.simulation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">QuackSeq:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quackseq.html">QuackSeq</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="quackseq.html">quackseq</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.event.html">quackseq.event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.functions.html">quackseq.functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.helpers.html">quackseq.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.measurement.html">quackseq.measurement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.options.html">quackseq.options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.phase_table.html">quackseq.phase_table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.pulseparameters.html">quackseq.pulseparameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.pulsesequence.html">quackseq.pulsesequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq.signalprocessing.html">quackseq.signalprocessing</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quackseq-simulator.html">QuackSeq Simulator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="quackseq_simulator.html">quackseq_simulator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="quackseq_simulator.simulator_model.html">quackseq_simulator.simulator_model</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../quackseq-limenqr.html">QuackSeq LimeNQR</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="quackseq_limenqr.html">quackseq_limenqr</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="quackseq_limenqr.limenqr.html">quackseq_limenqr.limenqr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq_limenqr.limenqr_controller.html">quackseq_limenqr.limenqr_controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quackseq_limenqr.limenqr_model.html">quackseq_limenqr.limenqr_model</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">API Reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../nqrduck.html" class="nav-link">NQRduck</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="nqrduck.core.html" class="nav-link">nqrduck.core</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">nqrduck.core.install_wizard</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-nqrduck.core.install_wizard">
+<span id="nqrduck-core-install-wizard"></span><h1>nqrduck.core.install_wizard<a class="headerlink" href="#module-nqrduck.core.install_wizard" title="Link to this heading">#</a></h1>
+<p>A wizard to install different NQRduck modules.</p>
+<p class="rubric">Classes</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nqrduck.core.install_wizard.DuckWizard" title="nqrduck.core.install_wizard.DuckWizard"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DuckWizard</span></code></a>(*args, **kwargs)</p></td>
+<td><p>A wizard to install different NQRduck modules.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nqrduck.core.install_wizard.FinishPage" title="nqrduck.core.install_wizard.FinishPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FinishPage</span></code></a>(*args, **kwargs)</p></td>
+<td><p>The finish page of the wizard.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nqrduck.core.install_wizard.InstallPage" title="nqrduck.core.install_wizard.InstallPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InstallPage</span></code></a>(*args, **kwargs)</p></td>
+<td><p>The installation page of the wizard.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nqrduck.core.install_wizard.ListInstallPage" title="nqrduck.core.install_wizard.ListInstallPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ListInstallPage</span></code></a>(*args, **kwargs)</p></td>
+<td><p>The installation page of the wizard.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nqrduck.core.install_wizard.SelectionPage" title="nqrduck.core.install_wizard.SelectionPage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SelectionPage</span></code></a>(*args, **kwargs)</p></td>
+<td><p>The selection page of the wizard.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#nqrduck.core.install_wizard.WelcomePage" title="nqrduck.core.install_wizard.WelcomePage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WelcomePage</span></code></a>(*args, **kwargs)</p></td>
+<td><p>The welcome page of the wizard.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.DuckWizard">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nqrduck.core.install_wizard.</span></span><span class="sig-name descname"><span class="pre">DuckWizard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck.core.install_wizard.DuckWizard" title="Link to this definition">#</a></dt>
+<dd><p>A wizard to install different NQRduck modules.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.FinishPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nqrduck.core.install_wizard.</span></span><span class="sig-name descname"><span class="pre">FinishPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck.core.install_wizard.FinishPage" title="Link to this definition">#</a></dt>
+<dd><p>The finish page of the wizard.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.FinishPage.finish">
+<span class="sig-name descname"><span class="pre">finish</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck.core.install_wizard.FinishPage.finish" title="Link to this definition">#</a></dt>
+<dd><p>Finish the wizard.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.FinishPage.restart">
+<span class="sig-name descname"><span class="pre">restart</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck.core.install_wizard.FinishPage.restart" title="Link to this definition">#</a></dt>
+<dd><p>Restart the application.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.InstallPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nqrduck.core.install_wizard.</span></span><span class="sig-name descname"><span class="pre">InstallPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck.core.install_wizard.InstallPage" title="Link to this definition">#</a></dt>
+<dd><p>The installation page of the wizard.</p>
+<p>This page is shown while the modules are installed.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.InstallPage.InstallThread">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InstallThread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck.core.install_wizard.InstallPage.InstallThread" title="Link to this definition">#</a></dt>
+<dd><p>Thread class to handle running pip install commands in the background.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.InstallPage.InstallThread.completed_signal">
+<span class="sig-name descname"><span class="pre">completed_signal</span></span><a class="headerlink" href="#nqrduck.core.install_wizard.InstallPage.InstallThread.completed_signal" title="Link to this definition">#</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.InstallPage.InstallThread.output_signal">
+<span class="sig-name descname"><span class="pre">output_signal</span></span><a class="headerlink" href="#nqrduck.core.install_wizard.InstallPage.InstallThread.output_signal" title="Link to this definition">#</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.InstallPage.InstallThread.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck.core.install_wizard.InstallPage.InstallThread.run" title="Link to this definition">#</a></dt>
+<dd><p>Run the installation of the modules.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.InstallPage.append_output">
+<span class="sig-name descname"><span class="pre">append_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck.core.install_wizard.InstallPage.append_output" title="Link to this definition">#</a></dt>
+<dd><p>Append the installation output to the text widget.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.InstallPage.initializePage">
+<span class="sig-name descname"><span class="pre">initializePage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nqrduck.core.install_wizard.InstallPage.initializePage" title="Link to this definition">#</a></dt>
+<dd><p>Generate the installation widgets for the modules.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.InstallPage.isComplete">
+<span class="sig-name descname"><span class="pre">isComplete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#nqrduck.core.install_wizard.InstallPage.isComplete" title="Link to this definition">#</a></dt>
+<dd><p>Check if the installation is complete.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.InstallPage.output_signal">
+<span class="sig-name descname"><span class="pre">output_signal</span></span><a class="headerlink" href="#nqrduck.core.install_wizard.InstallPage.output_signal" title="Link to this definition">#</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.InstallPage.set_completed">
+<span class="sig-name descname"><span class="pre">set_completed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">completed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nqrduck.core.install_wizard.InstallPage.set_completed" title="Link to this definition">#</a></dt>
+<dd><p>Set the installation as completed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.ListInstallPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nqrduck.core.install_wizard.</span></span><span class="sig-name descname"><span class="pre">ListInstallPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck.core.install_wizard.ListInstallPage" title="Link to this definition">#</a></dt>
+<dd><p>The installation page of the wizard.</p>
+<p>This page is shown while the modules are installed.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.ListInstallPage.cleanupPage">
+<span class="sig-name descname"><span class="pre">cleanupPage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nqrduck.core.install_wizard.ListInstallPage.cleanupPage" title="Link to this definition">#</a></dt>
+<dd><p>Clean up the InstallPage.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.ListInstallPage.get_install_modules">
+<span class="sig-name descname"><span class="pre">get_install_modules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#nqrduck.core.install_wizard.ListInstallPage.get_install_modules" title="Link to this definition">#</a></dt>
+<dd><p>Returns the modules that are selected for installation  minus the already installed modules.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The modules that are selected for installation</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.ListInstallPage.initializePage">
+<span class="sig-name descname"><span class="pre">initializePage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nqrduck.core.install_wizard.ListInstallPage.initializePage" title="Link to this definition">#</a></dt>
+<dd><p>Generate the installation widgets for the modules.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.SelectionPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nqrduck.core.install_wizard.</span></span><span class="sig-name descname"><span class="pre">SelectionPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck.core.install_wizard.SelectionPage" title="Link to this definition">#</a></dt>
+<dd><p>The selection page of the wizard.</p>
+<p>It uses the modules.json file to get the modules that can be installed.
+The modules.json file contains the name, description and source of the modules.
+It is hosted on GitHub.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>installed_modules</strong> (<em>list</em>) – The modules that are already installed</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.SelectionPage.generate_installation_widgets">
+<span class="sig-name descname"><span class="pre">generate_installation_widgets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nqrduck.core.install_wizard.SelectionPage.generate_installation_widgets" title="Link to this definition">#</a></dt>
+<dd><p>Generate the installation widgets for the modules.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.SelectionPage.get_URLs">
+<span class="sig-name descname"><span class="pre">get_URLs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#nqrduck.core.install_wizard.SelectionPage.get_URLs" title="Link to this definition">#</a></dt>
+<dd><p>Get the URLs of the different modules.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The URLs of the modules</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.SelectionPage.get_dependencies">
+<span class="sig-name descname"><span class="pre">get_dependencies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#nqrduck.core.install_wizard.SelectionPage.get_dependencies" title="Link to this definition">#</a></dt>
+<dd><p>Get the dependencies of a module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>module_name</strong> (<em>str</em>) – The name of the module</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The dependencies of the module</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.SelectionPage.get_modules">
+<span class="sig-name descname"><span class="pre">get_modules</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#nqrduck.core.install_wizard.SelectionPage.get_modules" title="Link to this definition">#</a></dt>
+<dd><p>Get the modules from the modules json file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The module data</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.SelectionPage.initializePage">
+<span class="sig-name descname"><span class="pre">initializePage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nqrduck.core.install_wizard.SelectionPage.initializePage" title="Link to this definition">#</a></dt>
+<dd><p>Overrides the initializePage method to generate the installation widgets.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.SelectionPage.on_checkbox_changed">
+<span class="sig-name descname"><span class="pre">on_checkbox_changed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nqrduck.core.install_wizard.SelectionPage.on_checkbox_changed" title="Link to this definition">#</a></dt>
+<dd><p>Update the different modules when the checkbox is changed with the according dependencies.</p>
+<p>If a module is  manually checked it will stay checked when unselecting a module that depends on it.
+If we select a module with dependencies, the dependencies will be selected as well and the checkboxes will be disabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>int</em>) – The state of the checkbox</p></li>
+<li><p><strong>module_name</strong> (<em>str</em>) – The name of the module</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.SelectionPage.on_checkbox_clicked">
+<span class="sig-name descname"><span class="pre">on_checkbox_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#nqrduck.core.install_wizard.SelectionPage.on_checkbox_clicked" title="Link to this definition">#</a></dt>
+<dd><p>Save if a checkbox was manually clicked and what state it was set to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>int</em>) – The state of the checkbox</p></li>
+<li><p><strong>module_name</strong> (<em>str</em>) – The name of the module</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nqrduck.core.install_wizard.WelcomePage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nqrduck.core.install_wizard.</span></span><span class="sig-name descname"><span class="pre">WelcomePage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nqrduck.core.install_wizard.WelcomePage" title="Link to this definition">#</a></dt>
+<dd><p>The welcome page of the wizard.</p>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="nqrduck.core.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">nqrduck.core</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="nqrduck.core.main_controller.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">nqrduck.core.main_controller</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.DuckWizard"><code class="docutils literal notranslate"><span class="pre">DuckWizard</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.FinishPage"><code class="docutils literal notranslate"><span class="pre">FinishPage</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.FinishPage.finish"><code class="docutils literal notranslate"><span class="pre">FinishPage.finish()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.FinishPage.restart"><code class="docutils literal notranslate"><span class="pre">FinishPage.restart()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.InstallPage"><code class="docutils literal notranslate"><span class="pre">InstallPage</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.InstallPage.InstallThread"><code class="docutils literal notranslate"><span class="pre">InstallPage.InstallThread</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.InstallPage.InstallThread.completed_signal"><code class="docutils literal notranslate"><span class="pre">InstallPage.InstallThread.completed_signal</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.InstallPage.InstallThread.output_signal"><code class="docutils literal notranslate"><span class="pre">InstallPage.InstallThread.output_signal</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.InstallPage.InstallThread.run"><code class="docutils literal notranslate"><span class="pre">InstallPage.InstallThread.run()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.InstallPage.append_output"><code class="docutils literal notranslate"><span class="pre">InstallPage.append_output()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.InstallPage.initializePage"><code class="docutils literal notranslate"><span class="pre">InstallPage.initializePage()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.InstallPage.isComplete"><code class="docutils literal notranslate"><span class="pre">InstallPage.isComplete()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.InstallPage.output_signal"><code class="docutils literal notranslate"><span class="pre">InstallPage.output_signal</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.InstallPage.set_completed"><code class="docutils literal notranslate"><span class="pre">InstallPage.set_completed()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.ListInstallPage"><code class="docutils literal notranslate"><span class="pre">ListInstallPage</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.ListInstallPage.cleanupPage"><code class="docutils literal notranslate"><span class="pre">ListInstallPage.cleanupPage()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.ListInstallPage.get_install_modules"><code class="docutils literal notranslate"><span class="pre">ListInstallPage.get_install_modules()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.ListInstallPage.initializePage"><code class="docutils literal notranslate"><span class="pre">ListInstallPage.initializePage()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.SelectionPage"><code class="docutils literal notranslate"><span class="pre">SelectionPage</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.SelectionPage.generate_installation_widgets"><code class="docutils literal notranslate"><span class="pre">SelectionPage.generate_installation_widgets()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.SelectionPage.get_URLs"><code class="docutils literal notranslate"><span class="pre">SelectionPage.get_URLs()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.SelectionPage.get_dependencies"><code class="docutils literal notranslate"><span class="pre">SelectionPage.get_dependencies()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.SelectionPage.get_modules"><code class="docutils literal notranslate"><span class="pre">SelectionPage.get_modules()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.SelectionPage.initializePage"><code class="docutils literal notranslate"><span class="pre">SelectionPage.initializePage()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.SelectionPage.on_checkbox_changed"><code class="docutils literal notranslate"><span class="pre">SelectionPage.on_checkbox_changed()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.SelectionPage.on_checkbox_clicked"><code class="docutils literal notranslate"><span class="pre">SelectionPage.on_checkbox_clicked()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nqrduck.core.install_wizard.WelcomePage"><code class="docutils literal notranslate"><span class="pre">WelcomePage</span></code></a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/api_reference/_autosummary/nqrduck.core.install_wizard.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, jupfi.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
