@@ -1,0 +1,59 @@
+name: Build and Publish Sphinx Documentation
+
+on:
+  # Trigger when pushing to the main branch
+  push:
+    branches:
+      - main 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Check out the code
+    - name: Check out the repository
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Python
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'  # Replace with your required Python version
+
+    # Step 3: Install dependencies
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip setuptools wheel
+        pip install -r requirements.txt
+
+    # Step 4: Build the docs using Sphinx
+    - name: Build Sphinx documentation
+      run: |
+        make html
+
+    # Step 5: Deploy to a separate branch
+    - name: Deploy built documentation to the built-docs branch
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        # Create a directory to stage files for the branch
+        mkdir -p deploy
+        cp -r docs/_build/html/* deploy/
+
+        # Configure Git user for this Action
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+        # Switch to a new branch called 'built-docs'
+        git checkout --orphan built-docs
+
+        # Clean up the branch and add the deployed files
+        git rm -rf .
+        cp -r deploy/* .
+        rm -rf deploy/
+
+        # Commit and push changes
+        git add .
+        git commit -m "Deploy Sphinx documentation [skip ci]"
+        git push --force origin HEAD:built-docs
